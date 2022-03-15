@@ -84,7 +84,7 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 # Blog
 # -----------------------------------------------------------------------------
 
-blog_name: Sehyun Cho Tech Blog  # your blog must have a name for it to show up in the nav bar
+blog_name: Tech Blog  # your blog must have a name for it to show up in the nav bar
 blog_description: What I learned in four years journey
 permalink: /blog/:year/:title/
 
@@ -234,7 +234,7 @@ scholar:
 # -----------------------------------------------------------------------------
 
 imagemagick:
-  enabled: true
+  enabled: false
   widths:
     - 480
     - 800

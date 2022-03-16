@@ -2,7 +2,7 @@
 # Site settings
 # -----------------------------------------------------------------------------
 
-title: Tech Blog # the website title (if blank, full name will be used instead)
+title: Sehyun Cho # the website title (if blank, full name will be used instead)
 first_name: Sehyun
 middle_name: 
 last_name: Cho
@@ -73,7 +73,7 @@ dblp_url: # your DBLP profile url
 stackoverflow_id: #your stackoverflow id
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Are you having a great day? I hope you are!
 
 google_analytics: UA-221705925 # your google-analytics ID (format: UA-XXXXXXXXX)
 google_site_verification:  # your google-site-verification ID (Google Search Console)
@@ -85,7 +85,7 @@ panelbear_analytics:  # panelbear analytics site ID (format: XXXXXXXXX)
 # -----------------------------------------------------------------------------
 
 blog_name: Tech Blog  # your blog must have a name for it to show up in the nav bar
-blog_description: What I learned in four years journey
+blog_description: What I learned in this journey
 permalink: /blog/:year/:title/
 
 # Pagination

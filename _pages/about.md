@@ -2,11 +2,11 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='https://www.fiu.edu'>Florida International University</a>. Address. Contacts. Moto. Etc.
+subtitle: <a href='https://www.fiu.edu'>Florida International University</a>. Computer Science(B.S)
 
 profile:
   align: left
-  image: prof_pic.jpg
+  image: prof_pic.png
   address: >
     <p>Florida, United States</p>
     <p></p>
@@ -17,8 +17,10 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+Hi. I'm majoring in `Computer Science` at Florida International University and plan to graduate in December 2022.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+I've been working as an `Academic Tutor` at <a href="https://asiportal.cis.fiu.edu/">Academic Success Initiative(ASI)</a> since July 2021.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I would post what I learned throughout these 5 year in the United States, mainly Computer-Science related topics.
+
+Please let me know if you have any concerns or questions, and any suggestions are always welcome.

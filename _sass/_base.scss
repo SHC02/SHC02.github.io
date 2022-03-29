@@ -240,7 +240,7 @@ blockquote {
 .social {
   text-align: center;
   .contact-icons {
-    font-size: 4rem;
+    font-size: 2.5rem;
     a {
       i::before {
         color: var(--global-text-color);
@@ -265,8 +265,8 @@ footer.fixed-bottom {
   font-size: 0.75rem;
   .container {
     color: var(--global-footer-text-color);
-    padding-top: 9px;
-    padding-bottom: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
   }
   a {
     color: var(--global-footer-link-color);
@@ -290,11 +290,14 @@ footer.sticky-bottom {
 .header-bar {
   border-bottom: 1px solid var(--global-divider-color);
   text-align: center;
-  padding-top: 2rem;
-  padding-bottom: 5rem;
+  padding-top: 0.1rem;
+  padding-bottom: 3rem;
   h1 {
     color: var(--global-theme-color);
-    font-size: 5rem;
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 1rem;
   }
 }
 
@@ -400,9 +403,15 @@ footer.sticky-bottom {
   }
 }
 
+// Resume
+.resume {
+  margin-top: 0rem;
+  .post-header{
+  text-align: center;
+}
+}
 
 // Publications
-
 .publications {
   margin-top: 2rem;
   h1 {

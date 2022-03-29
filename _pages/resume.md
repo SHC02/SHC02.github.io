@@ -10,7 +10,7 @@ nav: true
 <div class="resume">
 <html>
   <head>
-    <title>Title of the document</title>
+    <title>Resume</title>
   </head>
   <body>
     <embed src="../assets/pdf/Sehyun Cho resume 3.pdf" width="800px" height="1100px" />

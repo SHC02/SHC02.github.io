@@ -56,7 +56,7 @@
 
 html[data-theme='dark'] {
   --global-bg-color: #{$white-color};
-  --global-code-bg-color: #{$code-bg-color-light};
+  --global-code-bg-color: #{$code-bg-color-custom};
   --global-text-color: #{$black-color};
   --global-text-color-light: #{$grey-color};
   --global-theme-color: #{$new-blue-color};  

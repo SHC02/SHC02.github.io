@@ -8,7 +8,6 @@ profile:
   align: right
   image: prof_pic.png
   address: >
-    <p>Sehyun Cho</p>
     <p>Florida, United States</p>
     <p>Incheon, South Korea</p>
 

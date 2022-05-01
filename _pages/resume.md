@@ -13,7 +13,7 @@ nav: true
     <title>Resume</title>
   </head>
   <body>
-    <embed src="../assets/pdf/Sehyun Cho resume 3.pdf" width="800px" height="1100px" />
+    <embed src="../assets/pdf/Sehyun Cho resume22.pdf" width="800px" height="1100px" />
   </body>
 </html>
 </div>

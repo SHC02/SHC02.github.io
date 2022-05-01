@@ -1,5 +1,3 @@
-# al-folio
-
 ## Purpose of using
 Personal blog
 

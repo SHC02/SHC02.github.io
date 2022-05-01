@@ -1,5 +1,9 @@
 # al-folio
 
+## Purpose of using
+Personal blog
+
+
 ## Contributing
 
 Contributions to al-folio are very welcome!

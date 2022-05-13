@@ -81,11 +81,9 @@ blockquote {
 }
 
 // Profile
-
 .profile {
   margin-left: 1rem;
   width: 100%;
-
   .address {
     margin-bottom: 5px;
     margin-top: 5px;
@@ -254,7 +252,7 @@ blockquote {
     }
   }
   .contact-note {
-    font-size: 0.8rem;
+    font-size: 0.7rem;
   }
 }
 
@@ -409,6 +407,14 @@ footer.sticky-bottom {
   .post-header{
   text-align: center;
 }
+}
+
+// Tutoring
+.tutoring{
+  margin-top: 0rem;
+  .post-header{
+    text-align: center;
+  }
 }
 
 // Publications

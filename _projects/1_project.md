@@ -2,9 +2,9 @@
 layout: page
 title: Testing project
 description: a project with a background image
-img: assets/img/12.jpg
+img: 
 importance: 1
-category: work
+category: tutoring
 ---
 
 Every project has a beautiful feature showcase page.

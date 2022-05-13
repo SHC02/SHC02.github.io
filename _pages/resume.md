@@ -2,7 +2,7 @@
 layout: page
 permalink: /resume/
 title: resume
-description:
+description: Latest update - 2022-05-08
 years: [2022]
 nav: true
 ---

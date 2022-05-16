@@ -2,7 +2,6 @@
 layout: page
 title: Testing project
 description: a project with a background image
-img: 
 importance: 1
 category: tutoring
 ---

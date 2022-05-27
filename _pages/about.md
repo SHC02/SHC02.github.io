@@ -21,6 +21,6 @@ Hi. I'm majoring in `Computer Science` at Florida International University and p
 
 I've been working as an `Academic Tutor` at <a href="https://asiportal.cis.fiu.edu/">Academic Success Initiative(ASI)</a> since July 2021.
 
-I would post what I learned throughout 5 years in the United States, mainly related to courseworks.
+I would post what I learned throughout 5 years in the United States.
 
 Please let me know if you have any concerns or questions, and any suggestions are always welcome.

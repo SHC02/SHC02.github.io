@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- Head -->
+  <head>    <!-- Metadata, OpenGraph and Schema.org -->
+    
+    <!-- Website verification -->
+    <meta name="google-site-verification" content="" />
+
+    <!-- Standard metadata -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Tech Blog | Linux setup with VirtualBox - 1</title>
+    <meta name="author" content="Sehyun  Cho" />
+    <meta name="description" content="Create Linux virtual environment with VirtualBox" />
+    <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website" />
+
+
+    <!-- Bootstrap & MDB -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/css/mdb.min.css" integrity="sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw=" crossorigin="anonymous" />
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.1/css/academicons.min.css" integrity="sha256-i1+4qU2G2860dGGIOJscdC30s9beBXjFfzjWLjBRsBg=" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons">
+
+    <!-- Code Syntax Highlighting -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/github.css" media="none" id="highlight_theme_light" />
+
+    <!-- Styles -->
+    
+    <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="canonical" href="https://shc02.github.io//blog/2022/Linux1/">
+    
+    <!-- Dark Mode -->
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark" />
+
+    <script src="/assets/js/theme.js"></script>
+    <script src="/assets/js/dark_mode.js"></script>
+    
+
+  </head>
+
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+
+    <!-- Header -->
+    <header>
+
+      <!-- Nav Bar -->
+      <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top">
+        <div class="container">
+          <a class="navbar-brand title font-weight-lighter" href="https://shc02.github.io//">Tech Blog</a>
+          <!-- Navbar Toggle -->
+          <button class="navbar-toggler collapsed ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+          </button>
+
+          <div class="collapse navbar-collapse text-right" id="navbarNav">
+            <ul class="navbar-nav ml-auto flex-nowrap">
+
+              <!-- About -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/">about</a>
+              </li>
+              
+              <!-- Blog -->
+              <li class="nav-item active">
+                <a class="nav-link" href="/blog/">blog</a>
+              </li>
+
+              <!-- Other pages -->
+              <li class="nav-item ">
+                <a class="nav-link" href="/resume/">resume</a>
+              </li>
+              <li class="nav-item ">
+                <a class="nav-link" href="/tutoring/">tutoring</a>
+              </li>
+
+              <!-- Toogle theme mode -->
+              <div class="toggle-container">
+                <a id="light-toggle">
+                  <i class="fas fa-moon"></i>
+                  <i class="fas fa-sun"></i>
+                </a>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Content -->
+    <div class="container mt-5">
+      <!-- _layouts/post.html -->
+
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Linux setup with VirtualBox - 1</h1>
+    <p class="post-meta">May 27, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+        ·  
+        <a href="/blog/category/Linux">
+          <i class="fas fa-tag fa-sm"></i> Linux</a>  
+          
+
+    </p>
+  </header>
+
+  <article class="post-content">
+    <p><code class="language-plaintext highlighter-rouge">TESTED ON WINDOWS 10 HOME</code></p>
+
+<p>VirtualBox: <a href="https://www.virtualbox.org/" target="_blank" rel="noopener noreferrer">Download Link</a>
+Ubuntu OS Image: <a href="https://ubuntu.com/download/desktop/thank-you?version=22.04&amp;architecture=amd64" target="_blank" rel="noopener noreferrer">Download Link</a></p>
+
+<p>=========================================================================================</p>
+
+<p>Set up the Linux virtual environment with VirtualBox.</p>
+
+<p>Definition of the virtualization:</p>
+
+<p>The creation of the virtual versions of something, specifically computer hardware, storage devices, and network resources.</p>
+
+<p>Basically, VirtualBox keep your OS, and run Linux with virtual machine.</p>
+
+<p>=========================================================================================</p>
+
+<p>Requirements:</p>
+
+<ol>
+  <li>
+    <p>12~25GB of the available storage space</p>
+  </li>
+  <li>
+    <p>CPU virtualization support - Enabling virtualiztion from your BIOS setup(Called VT-X, AMD-V, SVM, or Vanderpool).</p>
+  </li>
+  <li>
+    <p>Internet connection</p>
+  </li>
+  <li>
+    <p>System memory(RAM) 4GB as minimum.</p>
+  </li>
+</ol>
+
+<p>=========================================================================================</p>
+
+<p>*How to Enabling virtualization from BIOS</p>
+
+<ol>
+  <li>
+    <p>Restart the computer.</p>
+  </li>
+  <li>
+    <p>Before login screen, access BIOS with press assigned key. It can be vary by manufacturer, usually <code class="language-plaintext highlighter-rouge">F10, F2, F12, F1, or DEL.</code></p>
+  </li>
+  <li>
+    <p>In BIOS, change the virtualization setting to enable.</p>
+  </li>
+</ol>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/biosSetup-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/biosSetup-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/biosSetup-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/biosSetup.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>=========================================================================================</p>
+
+<p>After reboot, download the VirtualBox &amp; <code class="language-plaintext highlighter-rouge">VirtualBox Oracle VM VirtualBox Extension Pack</code> and install.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualbox1-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualbox1-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualbox1-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualbox1.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Open the VirtualBox and click the <code class="language-plaintext highlighter-rouge">NEW</code> button.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup1-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup1-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup1-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup1.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Create virtual image with any name and select type as Linux(would be Ubuntu here).</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup2-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup2-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup2-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup2.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Select virtual memory size. I set 1024MB.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup3-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup3-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup3-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup3.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>For hard disk, choose <code class="language-plaintext highlighter-rouge">create a virtual hard disk now</code>.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup4-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup4-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup4-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup4.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Select hard disk type as <code class="language-plaintext highlighter-rouge">VDI</code> and click next.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup5-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup5-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup5-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup5.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Select <code class="language-plaintext highlighter-rouge">Dynamically allocated</code> for the storage.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup6-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup6-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup6-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup6.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Select the size of the virtual hard disk. I recommend you to set at least 30~40GB for further OS update or usage.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup7-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup7-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup7-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup7.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>After creating virtual image, click the <code class="language-plaintext highlighter-rouge">Settings</code> button.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup8-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup8-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup8-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup8.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>From the <code class="language-plaintext highlighter-rouge">Storage</code> tab, click Empty IDE controller and import optical drive. This time we will use the latest ubuntu image.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup9-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup9-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup9-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup9.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup10-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup10-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup10-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup10.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Now we can start install ubuntu. Click <code class="language-plaintext highlighter-rouge">Start</code> button.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup11-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup11-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup11-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup11.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+
+  </article>
+
+</div>
+
+    </div>
+
+    <!-- Footer -->    
+    <footer class="fixed-bottom">
+      <div class="container mt-0">
+        © Copyright 2022 Sehyun  Cho. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="noopener noreferrer">Unsplash</a>.
+
+      </div>
+    </footer>
+
+    <!-- JavaScripts -->
+    <!-- jQuery -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    <!-- Bootsrap & MDB scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.2/dist/umd/popper.min.js" integrity="sha256-l/1pMF/+J4TThfgARS6KwWrk/egwuVvhRzfLAMQ6Ds4=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha256-SyTu6CwrfOhaznYZPoolVw2rxoY7lKYKQvqbtqN93HI=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js" integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
+
+    <!-- Masonry & imagesLoaded -->
+  <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+  <script defer src="/assets/js/masonry.js" type="text/javascript"></script>
+    
+  <!-- Medium Zoom JS -->
+  <script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.6/dist/medium-zoom.min.js" integrity="sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM=" crossorigin="anonymous"></script>
+  <script src="/assets/js/zoom.js"></script><!-- Load Common JS -->
+  <script src="/assets/js/common.js"></script>
+
+    <!-- MathJax -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        tags: 'ams'
+      }
+    };
+  </script>
+  <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
+  <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-221705925"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-221705925');
+  </script>
+  </body>
+</html>
+

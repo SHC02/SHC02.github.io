@@ -2,7 +2,7 @@
 <html lang="en">
 
   <!-- Head -->
-  <head><meta http-equiv="refresh" content="3; url=https://shc02.github.io//" />    <!-- Metadata, OpenGraph and Schema.org -->
+  <head>    <!-- Metadata, OpenGraph and Schema.org -->
     
     <!-- Website verification -->
     <meta name="google-site-verification" content="" />
@@ -11,9 +11,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Tech Blog | Page not found</title>
+    <title>Tech Blog | Git basic setup</title>
     <meta name="author" content="Sehyun  Cho" />
-    <meta name="description" content="Looks like there has been a mistake. Nothing exists here." />
+    <meta name="description" content="Git basic setup for config file" />
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website" />
 
 
@@ -34,7 +34,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://shc02.github.io//404.html">
+    <link rel="canonical" href="https://shc02.github.io//blog/2022/Git/">
     
     <!-- Dark Mode -->
     
@@ -73,7 +73,7 @@
               </li>
               
               <!-- Blog -->
-              <li class="nav-item ">
+              <li class="nav-item active">
                 <a class="nav-link" href="/blog/">blog</a>
               </li>
 
@@ -100,20 +100,93 @@
 
     <!-- Content -->
     <div class="container mt-5">
-      <!-- page.html -->
-        <div class="post">
+      <!-- _layouts/post.html -->
 
-          <header class="post-header">
-            <h1 class="post-title">Page not found</h1>
-            <p class="post-description">Looks like there has been a mistake. Nothing exists here.</p>
-          </header>
+<div class="post">
 
-          <article>
-            <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="https://shc02.github.io//">here</a>.</p>
+  <header class="post-header">
+    <h1 class="post-title">Git basic setup</h1>
+    <p class="post-meta">May 1, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+        ·  
+        <a href="/blog/category/Git">
+          <i class="fas fa-tag fa-sm"></i> Git</a>  
+          
 
-          </article>
+    </p>
+  </header>
 
-        </div>
+  <article class="post-content">
+    <p><code class="language-plaintext highlighter-rouge">Git</code> is well-known for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development.</p>
+
+<p>Using Git for command line, since GUI tools have limitations and those are always not available.</p>
+
+<p>Git download link:  <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">Download Link</a></p>
+
+<p>After installing, version check: git –version (tested on Windows 10)</p>
+
+<p>Hierarchy:</p>
+
+<p>SYSTEM: All users</p>
+
+<p>GLOBAL: All repositories of the current user</p>
+
+<p>LOCAL: The current repository</p>
+
+<p>Now let’s set up config file.</p>
+
+<p>On CMD:</p>
+
+<p>Set username:</p>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="n">user</span><span class="p">.</span><span class="n">name</span> <span class="s">"YOUR NAME"</span> 
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>Set email:</p>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span> <span class="n">global</span> <span class="n">email</span> <span class="n">example</span><span class="err">@</span><span class="n">gmail</span><span class="p">.</span><span class="n">com</span> 
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>Check actual change with code editor:</p>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr>
+<td class="gutter gl"><pre class="lineno">1
+</pre></td>
+<td class="code"><pre> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="n">e</span> 
+</pre></td>
+</tr></tbody></table></code></pre></figure>
+
+<p>When user runs ‘git confing –global e’ (In my case, my default code editor is VS Code)</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/git1-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/git1-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/git1-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/git1.png">
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+  </article>
+
+</div>
 
     </div>
 

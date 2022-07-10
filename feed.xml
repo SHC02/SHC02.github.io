@@ -1,0 +1,753 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://shc02.github.io//feed.xml" rel="self" type="application/atom+xml" /><link href="https://shc02.github.io//" rel="alternate" type="text/html" hreflang="en" /><updated>2022-07-10T03:27:45+00:00</updated><id>https://shc02.github.io//feed.xml</id><title type="html">Tech Blog</title><subtitle>A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
+</subtitle><entry><title type="html">Linux setup with VirtualBox - 1</title><link href="https://shc02.github.io//blog/2022/Linux1/" rel="alternate" type="text/html" title="Linux setup with VirtualBox - 1" /><published>2022-05-27T16:26:00+00:00</published><updated>2022-05-27T16:26:00+00:00</updated><id>https://shc02.github.io//blog/2022/Linux1</id><content type="html" xml:base="https://shc02.github.io//blog/2022/Linux1/"><![CDATA[<p><code class="language-plaintext highlighter-rouge">TESTED ON WINDOWS 10 HOME</code></p>
+
+<p>VirtualBox: <a href="https://www.virtualbox.org/">Download Link</a>
+Ubuntu OS Image: <a href="https://ubuntu.com/download/desktop/thank-you?version=22.04&amp;architecture=amd64">Download Link</a></p>
+
+<p>=========================================================================================</p>
+
+<p>Set up the Linux virtual environment with VirtualBox.</p>
+
+<p>Definition of the virtualization:</p>
+
+<p>The creation of the virtual versions of something, specifically computer hardware, storage devices, and network resources.</p>
+
+<p>Basically, VirtualBox keep your OS, and run Linux with virtual machine.</p>
+
+<p>=========================================================================================</p>
+
+<p>Requirements:</p>
+
+<ol>
+  <li>
+    <p>12~25GB of the available storage space</p>
+  </li>
+  <li>
+    <p>CPU virtualization support - Enabling virtualiztion from your BIOS setup(Called VT-X, AMD-V, SVM, or Vanderpool).</p>
+  </li>
+  <li>
+    <p>Internet connection</p>
+  </li>
+  <li>
+    <p>System memory(RAM) 4GB as minimum.</p>
+  </li>
+</ol>
+
+<p>=========================================================================================</p>
+
+<p>*How to Enabling virtualization from BIOS</p>
+
+<ol>
+  <li>
+    <p>Restart the computer.</p>
+  </li>
+  <li>
+    <p>Before login screen, access BIOS with press assigned key. It can be vary by manufacturer, usually <code class="language-plaintext highlighter-rouge">F10, F2, F12, F1, or DEL.</code></p>
+  </li>
+  <li>
+    <p>In BIOS, change the virtualization setting to enable.</p>
+  </li>
+</ol>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/biosSetup-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/biosSetup-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/biosSetup-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/biosSetup.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>=========================================================================================</p>
+
+<p>After reboot, download the VirtualBox &amp; <code class="language-plaintext highlighter-rouge">VirtualBox Oracle VM VirtualBox Extension Pack</code> and install.</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualbox1-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualbox1-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualbox1-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualbox1.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Open the VirtualBox and click the <code class="language-plaintext highlighter-rouge">NEW</code> button.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup1-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup1-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup1-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup1.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Create virtual image with any name and select type as Linux(would be Ubuntu here).</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup2-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup2-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup2-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup2.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Select virtual memory size. I set 1024MB.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup3-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup3-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup3-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup3.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>For hard disk, choose <code class="language-plaintext highlighter-rouge">create a virtual hard disk now</code>.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup4-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup4-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup4-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup4.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Select hard disk type as <code class="language-plaintext highlighter-rouge">VDI</code> and click next.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup5-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup5-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup5-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup5.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Select <code class="language-plaintext highlighter-rouge">Dynamically allocated</code> for the storage.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup6-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup6-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup6-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup6.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Select the size of the virtual hard disk. I recommend you to set at least 30~40GB for further OS update or usage.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup7-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup7-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup7-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup7.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>After creating virtual image, click the <code class="language-plaintext highlighter-rouge">Settings</code> button.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup8-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup8-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup8-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup8.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>From the <code class="language-plaintext highlighter-rouge">Storage</code> tab, click Empty IDE controller and import optical drive. This time we will use the latest ubuntu image.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup9-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup9-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup9-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup9.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup10-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup10-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup10-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup10.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>
+
+<p>Now we can start install ubuntu. Click <code class="language-plaintext highlighter-rouge">Start</code> button.</p>
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/virtualBox/setup11-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/virtualBox/setup11-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/virtualBox/setup11-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/virtualBox/setup11.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>]]></content><author><name></name></author><category term="Linux" /><summary type="html"><![CDATA[Create Linux virtual environment with VirtualBox]]></summary></entry><entry><title type="html">Git basic setup</title><link href="https://shc02.github.io//blog/2022/Git/" rel="alternate" type="text/html" title="Git basic setup" /><published>2022-05-01T15:50:00+00:00</published><updated>2022-05-01T15:50:00+00:00</updated><id>https://shc02.github.io//blog/2022/Git</id><content type="html" xml:base="https://shc02.github.io//blog/2022/Git/"><![CDATA[<p><code class="language-plaintext highlighter-rouge">Git</code> is well-known for tracking changes in any set of files, usually used for coordinating work among programmers collaboratively developing source code during software development.</p>
+
+<p>Using Git for command line, since GUI tools have limitations and those are always not available.</p>
+
+<p>Git download link:  <a href="https://git-scm.com/">Download Link</a></p>
+
+<p>After installing, version check: git –version (tested on Windows 10)</p>
+
+<p>Hierarchy:</p>
+
+<p>SYSTEM: All users</p>
+
+<p>GLOBAL: All repositories of the current user</p>
+
+<p>LOCAL: The current repository</p>
+
+<p>Now let’s set up config file.</p>
+
+<p>On CMD:</p>
+
+<p>Set username:</p>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="n">user</span><span class="p">.</span><span class="n">name</span> <span class="s">"YOUR NAME"</span> 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Set email:</p>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span> <span class="n">global</span> <span class="n">email</span> <span class="n">example</span><span class="err">@</span><span class="n">gmail</span><span class="p">.</span><span class="n">com</span> 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>Check actual change with code editor:</p>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+</pre></td><td class="code"><pre> <span class="n">git</span> <span class="n">config</span> <span class="o">--</span><span class="n">global</span> <span class="n">e</span> 
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>When user runs ‘git confing –global e’ (In my case, my default code editor is VS Code)</p>
+
+<div class="row mt-3">
+    <div class="col-sm mt-3 mt-md-0">
+        <figure>
+
+  <picture>
+    <!--<source media="(max-width: 480px)" srcset="/assets/img/git1-480.webp" />
+    <source media="(max-width: 800px)" srcset="/assets/img/git1-800.webp" />
+    <source media="(max-width: 1400px)" srcset="/assets/img/git1-1400.webp" />
+    -->
+
+    <!-- Fallback to the original file -->
+    <img class="img-fluid rounded z-depth-1" src="/assets/img/git1.png" />
+
+  </picture>
+
+</figure>
+
+    </div>
+</div>]]></content><author><name></name></author><category term="Git" /><summary type="html"><![CDATA[Git basic setup for config file]]></summary></entry><entry><title type="html">MPI in C with an example</title><link href="https://shc02.github.io//blog/2022/MPI/" rel="alternate" type="text/html" title="MPI in C with an example" /><published>2022-05-01T15:24:00+00:00</published><updated>2022-05-01T15:24:00+00:00</updated><id>https://shc02.github.io//blog/2022/MPI</id><content type="html" xml:base="https://shc02.github.io//blog/2022/MPI/"><![CDATA[<p><code class="language-plaintext highlighter-rouge">Message Passing Interface (MPI)</code> is a standardized and portable message-passing standard designed to function on parallel computing architectures.</p>
+
+<p>Here’s an example that using MPI to check prime numbers in range 1 to 25000 inclusive.</p>
+
+<p>To run MPI: mpirun -np [number of process] [program name]</p>
+
+<p>Example: <code class="language-plaintext highlighter-rouge">mpirun -np 7 countprimes</code> (7 processes,  Program name: countprimes)</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+</pre></td><td class="code"><pre><span class="cm">/**
+ * @author Sehyun Cho
+ *
+ * MPI program that count number of prime numbers in the numbers from 1 to
+ * n where n is long integer. 
+ * ======================================================================
+ * The value for n which should be set in the program using a constant should
+ * be 25000.
+ * Each process will test its share of the cases.
+ * Each process should not print out any primes that it finds, but it should
+ * keep a running total.
+ * Before the process finishes, it should print out its ID number and its
+ * count of primes that it found.
+ * The master process should end with printing a total for the count of the
+ * number of primes and the tital amount of time taken to find all the
+ * primes.
+ * =======================================================================
+ * Running this with 7 processors &lt;&lt; Goal
+ */</span>
+
+<span class="c1">// Import Headers</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="cp">
+#include</span> <span class="cpf">&lt;mpi.h&gt;</span><span class="cp">
+</span>
+<span class="cm">/* Return 1 if 'i'th bit of 'n' is 1; 0 otherwise */</span>
+<span class="cp">#define EXTRACT_BIT(n,i) ((n&amp;(1&lt;&lt;i))?1:0)
+</span><span class="c1">// set value of N as 25000</span>
+<span class="cp">#define N 25000
+</span>
+<span class="c1">// Find prime number function</span>
+<span class="kt">int</span> <span class="nf">findPrime</span><span class="p">(</span><span class="kt">int</span> <span class="n">id</span><span class="p">,</span> <span class="kt">int</span> <span class="n">prime</span><span class="p">)</span>
+<span class="p">{</span>
+	<span class="c1">// declare count varaible</span>
+	<span class="kt">int</span> <span class="n">count</span><span class="p">;</span>
+	<span class="c1">//conditional loop to find not prime number</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="p">(</span><span class="n">prime</span> <span class="o">/</span> <span class="mi">2</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+		<span class="k">if</span><span class="p">(</span><span class="n">prime</span> <span class="o">%</span> <span class="n">i</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+			<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="c1">//not prime if the number is 0 or 1</span>
+	<span class="k">if</span><span class="p">(</span><span class="n">prime</span> <span class="o">==</span> <span class="mi">0</span> <span class="o">||</span> <span class="n">prime</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span>
+		<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="c1">// increment of count vaiable</span>
+	<span class="n">count</span><span class="o">++</span><span class="p">;</span>
+	<span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="c1">// Main function</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+	<span class="kt">int</span> <span class="n">count</span><span class="p">;</span>            <span class="cm">/* Solutions found by this proc */</span>
+	<span class="kt">double</span> <span class="n">elapsed_time</span><span class="p">;</span>  <span class="cm">/* Time to find, count solutions */</span>
+	<span class="kt">int</span> <span class="n">global_count</span><span class="p">;</span>     <span class="cm">/* Total number of solutions */</span>
+	<span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">id</span><span class="p">;</span>               <span class="cm">/* Process rank */</span>
+	<span class="kt">int</span> <span class="n">p</span><span class="p">;</span>                <span class="cm">/* Number of processes */</span>
+  
+	<span class="kt">char</span> <span class="n">hostname</span><span class="p">[</span><span class="mi">1024</span><span class="p">];</span>
+
+	<span class="n">MPI_Init</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">argc</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">argv</span><span class="p">);</span>
+
+	<span class="n">MPI_Comm_rank</span> <span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">id</span><span class="p">);</span>
+	<span class="n">MPI_Comm_size</span> <span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">p</span><span class="p">);</span>
+
+	<span class="n">hostname</span><span class="p">[</span><span class="mi">1023</span><span class="p">]</span> <span class="o">=</span> <span class="sc">'\0'</span><span class="p">;</span>
+	<span class="n">gethostname</span><span class="p">(</span><span class="n">hostname</span><span class="p">,</span> <span class="mi">1023</span><span class="p">);</span>
+	
+	<span class="cm">/* Start timer */</span>
+	<span class="n">MPI_Barrier</span> <span class="p">(</span><span class="n">MPI_COMM_WORLD</span><span class="p">);</span>
+	<span class="n">elapsed_time</span> <span class="o">=</span> <span class="o">-</span> <span class="n">MPI_Wtime</span><span class="p">();</span>
+	
+	<span class="n">count</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="c1">// Iterating counter by findPrime, inclusive 25000</span>
+	<span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="n">id</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">N</span><span class="p">;</span> <span class="n">i</span> <span class="o">+=</span> <span class="n">p</span><span class="p">)</span>
+		<span class="n">count</span> <span class="o">+=</span> <span class="n">findPrime</span><span class="p">(</span><span class="n">id</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+	
+	<span class="c1">// print id and number of primes each process</span>
+	<span class="n">printf</span><span class="p">(</span><span class="s">"ID: %d | Number of primes: %d</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n">count</span><span class="p">);</span>
+
+	<span class="n">MPI_Reduce</span> <span class="p">(</span><span class="o">&amp;</span><span class="n">count</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">global_count</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">MPI_INT</span><span class="p">,</span> <span class="n">MPI_SUM</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span>
+			<span class="n">MPI_COMM_WORLD</span><span class="p">);</span>
+	<span class="cm">/* Stop timer */</span>
+	<span class="n">elapsed_time</span> <span class="o">+=</span> <span class="n">MPI_Wtime</span><span class="p">();</span>
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">id</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">printf</span> <span class="p">(</span><span class="s">"Execution time %8.6f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">elapsed_time</span><span class="p">);</span>
+		<span class="n">fflush</span> <span class="p">(</span><span class="n">stdout</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="n">MPI_Finalize</span><span class="p">();</span>
+	<span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">id</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="n">printf</span> <span class="p">(</span><span class="s">"There are %d prime numbers.</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">global_count</span><span class="p">);</span>
+	<span class="p">}</span>
+	<span class="c1">// end program</span>
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>]]></content><author><name></name></author><category term="C" /><summary type="html"><![CDATA[Short program that using MPI to count prime numbers]]></summary></entry><entry><title type="html">getopt in C programming</title><link href="https://shc02.github.io//blog/2022/getopt/" rel="alternate" type="text/html" title="getopt in C programming" /><published>2022-03-28T00:24:00+00:00</published><updated>2022-03-28T00:24:00+00:00</updated><id>https://shc02.github.io//blog/2022/getopt</id><content type="html" xml:base="https://shc02.github.io//blog/2022/getopt/"><![CDATA[<p><code class="language-plaintext highlighter-rouge">getopt()</code> function in C programming could use to parse command line options.</p>
+
+<p>Switch statement used to return value from <code class="language-plaintext highlighter-rouge">getopt</code></p>
+
+<p>If takes an argument from the usage, <code class="language-plaintext highlighter-rouge">':'</code> presents.(From the while loop)</p>
+
+<p>Here’s an example what I learned from the class.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+</pre></td><td class="code"><pre><span class="cm">/*
+  @author Sehyun Cho
+
+  Salary calculator that do bonuses and raises to a base salary 
+  as well as a veterans bump. Taxes will be deducted from the 
+  salary as well. Using getopt to parse the command line, to get salary.
+
+  -b: 5000 bonus on top of the salary, adds to the base.
+  -r: multiplies the base by percentage and adding up.
+  -v: 6000 bonus on top of the salary, adds to the base.
+  -t: multiplies the base by percentage and subtracting.
+  
+  getopt command line below:
+
+  usage: salary [-bv] [-r rnum] -t tnum base
+
+*/</span>
+
+<span class="c1">// Headers
+</span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="c1">
+</span><span class="cp">
+#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="c1">
+</span><span class="cp">
+#include</span> <span class="cpf">&lt;unistd.h&gt;</span><span class="c1">
+</span><span class="cp">
+</span>
+<span class="c1">// Main fuction
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="o">**</span><span class="n">argv</span><span class="p">)</span>
+<span class="p">{</span>	
+	<span class="c1">// Declare variables
+</span>
+	<span class="k">extern</span> <span class="kt">char</span> <span class="o">*</span><span class="n">optarg</span><span class="p">;</span>
+	<span class="k">extern</span> <span class="kt">int</span> <span class="n">optind</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">c</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">tnum</span><span class="p">,</span> <span class="n">rnum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">tflag</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+	<span class="kt">int</span> <span class="n">base</span><span class="p">;</span>
+	<span class="kt">double</span> <span class="n">rAmount</span><span class="p">,</span> <span class="n">vBonus</span><span class="p">,</span> <span class="n">bBonus</span><span class="p">,</span> <span class="n">tax</span><span class="p">,</span> <span class="n">salary</span><span class="p">;</span>
+
+	<span class="c1">// Declare usage
+</span>
+	<span class="k">static</span> <span class="kt">char</span> <span class="n">usage</span><span class="p">[]</span> <span class="o">=</span> <span class="s">"usage %s [-bv] [-r rnum] -t tnum value</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+	<span class="c1">// Switch statement - Since 'r' and 't' take argument, ':' contain.
+</span>
+	<span class="k">while</span> <span class="p">((</span><span class="n">c</span> <span class="o">=</span> <span class="n">getopt</span> <span class="p">(</span><span class="n">argc</span><span class="p">,</span> <span class="n">argv</span><span class="p">,</span> <span class="s">"vr:bt:"</span><span class="p">))</span> <span class="o">!=</span> <span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+	<span class="p">{</span>
+		<span class="k">switch</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+		<span class="p">{</span>
+			<span class="k">case</span> <span class="sc">'v'</span><span class="p">:</span>
+				<span class="c1">// Assign bonus 6000 if case v
+</span>
+				<span class="n">vBonus</span> <span class="o">=</span> <span class="mi">6000</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="k">case</span> <span class="sc">'r'</span><span class="p">:</span>
+				<span class="n">rnum</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">optarg</span><span class="p">);</span>
+				<span class="c1">// Restrict r value in between 2 and 10
+</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">rnum</span> <span class="o">&lt;</span> <span class="mi">2</span> <span class="o">||</span> <span class="n">rnum</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">)</span>
+				<span class="p">{</span>
+					<span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">"%s:Error. The rnum should be between 2 and 10.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+					<span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+				<span class="p">}</span>
+				<span class="n">rAmount</span> <span class="o">=</span> <span class="n">rnum</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mo">01</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="k">case</span> <span class="sc">'b'</span><span class="p">:</span>
+				<span class="c1">// Assign bonus 5000 if case b
+</span>
+				<span class="n">bBonus</span> <span class="o">=</span> <span class="mi">5000</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="k">case</span> <span class="sc">'t'</span><span class="p">:</span>
+				<span class="n">tnum</span> <span class="o">=</span> <span class="n">atoi</span><span class="p">(</span><span class="n">optarg</span><span class="p">);</span>
+				<span class="c1">// Restrict t value in between 5 and 30
+</span>
+				<span class="k">if</span><span class="p">(</span><span class="n">tnum</span> <span class="o">&lt;</span> <span class="mi">5</span> <span class="o">||</span> <span class="n">tnum</span> <span class="o">&gt;</span> <span class="mi">30</span><span class="p">)</span>
+				<span class="p">{</span>
+					<span class="n">fprintf</span><span class="p">(</span><span class="n">stderr</span><span class="p">,</span> <span class="s">"%s:Error. The tnum should be between 5 and 30.</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+					<span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+				<span class="p">}</span>
+				<span class="n">tflag</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+				<span class="n">tax</span> <span class="o">=</span> <span class="n">tnum</span> <span class="o">*</span> <span class="mi">0</span><span class="p">.</span><span class="mo">01</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+			<span class="k">case</span> <span class="sc">'?'</span><span class="p">:</span>
+				<span class="c1">// case '?' shows marks as an error
+</span>
+				<span class="n">err</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+				<span class="k">break</span><span class="p">;</span>
+		<span class="p">}</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</pre></td></tr></tbody></table></code></pre></figure>]]></content><author><name></name></author><category term="C" /><summary type="html"><![CDATA[getopt function in C programming]]></summary></entry></feed>

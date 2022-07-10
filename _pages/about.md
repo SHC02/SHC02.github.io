@@ -6,7 +6,7 @@ subtitle: <a href='https://www.fiu.edu'>Florida International University</a>. Co
 
 profile:
   align: right
-  image: prof_pic.png
+  image: prof_pic.jpg
   address: 
     <p>Florida, United States</p>
 
